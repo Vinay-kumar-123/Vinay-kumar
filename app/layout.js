@@ -38,6 +38,11 @@ export const metadata = {
   ],
   authors: [{ name: 'Vinay Kumar' }],
   creator: 'Vinay Kumar',
+  icons: {
+    icon: [{ url: '/icon.svg', type: 'image/svg+xml' }],
+    shortcut: '/icon.svg',
+    apple: '/icon.svg',
+  },
   openGraph: {
     type: 'website',
     locale: 'en_US',
