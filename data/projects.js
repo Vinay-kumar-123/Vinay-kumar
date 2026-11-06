@@ -1,0 +1,98 @@
+export const projects = [
+  {
+    id: 1,
+    title: 'CrowdOS',
+    description:
+      'AI-powered crowd monitoring and predictive crowd intelligence platform. Uses computer vision and machine learning to analyze crowd density, detect anomalies, and generate real-time safety insights for event management and public spaces.',
+    tags: ['Python', 'AI/ML', 'Computer Vision', 'FastAPI', 'React'],
+    github: 'https://github.com/Vinay-kumar-123/CrowdOS',
+    demo: null,
+    status: 'in-progress',
+    featured: true,
+    category: 'AI/ML',
+  },
+  {
+    id: 2,
+    title: 'Excel Analytics',
+    description:
+      'A full-stack data analytics platform that lets users upload Excel files and instantly generate interactive charts, pivot summaries, and data visualizations. Supports multiple chart types and downloadable reports.',
+    tags: ['JavaScript', 'React', 'Node.js', 'Chart.js', 'Vercel'],
+    github: 'https://github.com/Vinay-kumar-123/Excel-analysis',
+    demo: 'https://excel-analytics-blush.vercel.app',
+    status: 'completed',
+    featured: true,
+    category: 'Full-Stack',
+  },
+  {
+    id: 3,
+    title: 'WiFi Service Desk SaaS',
+    description:
+      'Complaint and service management platform built for internet service providers. Enables customers to raise support tickets and allows ISP teams to manage, prioritize, and resolve service issues efficiently.',
+    tags: ['JavaScript', 'React', 'Node.js', 'MongoDB', 'Express'],
+    github: 'https://github.com/Vinay-kumar-123/Wifi_services',
+    demo: null,
+    status: 'completed',
+    featured: true,
+    category: 'SaaS',
+  },
+  {
+    id: 4,
+    title: 'Food Not Waste (NutriLoop)',
+    description:
+      'Food waste reduction platform connecting surplus food donors with NGOs and individuals in need. Features real-time listings, geolocation-based matching, and a community dashboard to track waste reduction impact.',
+    tags: ['JavaScript', 'React', 'Firebase', 'Next.js', 'Tailwind CSS'],
+    github: 'https://github.com/Vinay-kumar-123/Food-waste-Stop',
+    demo: 'https://nutriloop-platform.vercel.app',
+    status: 'completed',
+    featured: true,
+    category: 'Full-Stack',
+  },
+  {
+    id: 5,
+    title: 'AI YouTube Analyzer',
+    description:
+      'An AI-powered tool that analyzes YouTube video content — extracting key insights, summarizing discussions, and generating topic breakdowns to accelerate learning from video content.',
+    tags: ['JavaScript', 'React', 'Generative AI', 'Next.js', 'API Integration'],
+    github: 'https://github.com/Vinay-kumar-123/Ai_Analyzer',
+    demo: 'https://ai-analyzer-blue.vercel.app',
+    status: 'completed',
+    featured: true,
+    category: 'AI/ML',
+  },
+  {
+    id: 6,
+    title: 'ScanBite — Restaurant Menu Scanner',
+    description:
+      'QR code-based digital menu platform for restaurants. Customers scan a code to browse the full menu on their phone. Includes an admin panel for menu management, pricing updates, and category organization.',
+    tags: ['JavaScript', 'React', 'Firebase', 'QR Code', 'Vercel'],
+    github: 'https://github.com/Vinay-kumar-123/Scan_menu',
+    demo: 'https://scanbite-five.vercel.app',
+    status: 'completed',
+    featured: true,
+    category: 'Full-Stack',
+  },
+  {
+    id: 7,
+    title: 'Car Price Prediction (ML)',
+    description:
+      'Machine learning model that predicts used car prices based on features like brand, year, mileage, and fuel type. Deployed as an interactive web app where users input car details and receive an estimated market value.',
+    tags: ['Python', 'Machine Learning', 'Scikit-learn', 'Jupyter', 'Vercel'],
+    github: 'https://github.com/Vinay-kumar-123/Car_prediction',
+    demo: 'https://car-prediction-brown.vercel.app',
+    status: 'completed',
+    featured: false,
+    category: 'AI/ML',
+  },
+  {
+    id: 8,
+    title: 'NutriPlan Lite',
+    description:
+      'High-performance calorie tracker using the Mifflin-St Jeor equation to calculate personalized daily caloric goals. Features real-time food logging, glassmorphism-style UI, and a responsive Tailwind design.',
+    tags: ['HTML', 'Tailwind CSS', 'JavaScript', 'Vercel'],
+    github: 'https://github.com/Vinay-kumar-123/NutriPlan-Lite',
+    demo: 'https://nutri-plan-lite.vercel.app',
+    status: 'completed',
+    featured: false,
+    category: 'Full-Stack',
+  },
+];
