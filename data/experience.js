@@ -1,18 +1,24 @@
 export const experienceData = [
   {
     id: 1,
-    role: 'Android Development Mentor & Technical Coordinator',
+    role: 'Full Stack & Machine Learning',
     company: 'HSR Hi-Tech Solutions',
-    type: 'Mentorship & Coordination',
+    type: 'Software Development & Industry Exposure',
     period: '2024 – Present',
     description: [
-      'Mentored student developers on Android application development fundamentals and best practices.',
-      'Coordinated cross-functional student development teams through project lifecycle from planning to execution.',
-      'Provided technical guidance on architecture decisions, code quality, and debugging.',
-      'Facilitated knowledge-sharing sessions and code reviews to accelerate team learning.',
-      'Collaborated with project leads to align student deliverables with product requirements.',
+      'Worked on practical software development activities, gaining industry exposure in full-stack web development and modern application technologies.',
+      'Contributed to developing responsive user interfaces, implementing application functionality, integrating backend services, and working with Firebase.',
+      'Participated in real-world project assignments, collaborative development activities, and technical discussions.',
+      'Strengthened problem-solving, debugging, teamwork, and project implementation skills through hands-on experience.',
     ],
-    skills: ['Android Development', 'Mentorship', 'Team Coordination', 'Technical Guidance'],
+    skills: [
+      'Full-Stack Web Development',
+      'Machine Learning',
+      'Firebase',
+      'Backend Integration',
+      'Responsive UI',
+      'Debugging & Problem Solving',
+    ],
   },
 ];
 

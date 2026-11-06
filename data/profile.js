@@ -7,7 +7,7 @@ export const profile = {
 
 I've worked on a range of projects — from AI-powered crowd intelligence systems and data analytics platforms to SaaS tools for internet service providers and food waste reduction platforms. Each project reflects my drive to solve practical problems with thoughtful engineering.
 
-At HSR Hi-Tech Solutions, I mentor student developers working on Android applications, guide project execution, and help coordinate cross-functional technical teams.
+Through practical software development at HSR Hi-Tech Solutions, I gained industry exposure in full-stack web development and modern application technologies, contributing to responsive UI development, application functionality, and backend/Firebase integration.
 
 I'm actively exploring generative AI integration, cloud deployment, and product engineering — building toward a career as a full-stack engineer and product builder.`,
   email: 'vinay.k.dev4@gmail.com',

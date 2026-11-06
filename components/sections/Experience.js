@@ -5,7 +5,7 @@ import { Briefcase, GraduationCap, CalendarDays, MapPin } from 'lucide-react';
 import SectionHeading from '@/components/ui/SectionHeading';
 import { experienceData, educationData } from '@/data/experience';
 
-function TimelineCard({ title, subtitle, period, location, points, type, index }) {
+function TimelineCard({ title, subtitle, period, location, points, skills, type, index }) {
   return (
     <motion.div
       initial={{ opacity: 0, x: type === 'work' ? -20 : 20 }}
@@ -39,16 +39,30 @@ function TimelineCard({ title, subtitle, period, location, points, type, index }
 
         {/* Content */}
         {Array.isArray(points) ? (
-          <ul className="space-y-1.5">
+          <ul className="space-y-2 mb-4">
             {points.map((point, i) => (
-              <li key={i} className="flex gap-2 text-sm text-gray-400">
-                <span className="mt-1.5 w-1 h-1 rounded-full bg-indigo-500/60 shrink-0" />
-                {point}
+              <li key={i} className="flex gap-2 text-sm text-gray-400 leading-relaxed">
+                <span className="mt-2 w-1.5 h-1.5 rounded-full bg-indigo-500/80 shrink-0" />
+                <span>{point}</span>
               </li>
             ))}
           </ul>
         ) : (
-          <p className="text-sm text-gray-400 leading-relaxed">{points}</p>
+          <p className="text-sm text-gray-400 leading-relaxed mb-4">{points}</p>
+        )}
+
+        {/* Skill tags */}
+        {skills && skills.length > 0 && (
+          <div className="pt-2 border-t border-gray-800/80 flex flex-wrap gap-1.5">
+            {skills.map((skill) => (
+              <span
+                key={skill}
+                className="text-xs font-medium px-2 py-0.5 bg-gray-800/70 text-gray-300 rounded-md border border-gray-700/50"
+              >
+                {skill}
+              </span>
+            ))}
+          </div>
         )}
       </div>
     </motion.div>
@@ -83,6 +97,7 @@ export default function Experience() {
                   period={exp.period}
                   location={exp.location}
                   points={exp.description}
+                  skills={exp.skills}
                   type="work"
                   index={i}
                 />
