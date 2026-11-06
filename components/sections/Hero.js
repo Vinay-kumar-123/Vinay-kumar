@@ -2,8 +2,9 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import { Download, ArrowDown, ExternalLink } from 'lucide-react';
+import { ArrowDown, ExternalLink } from 'lucide-react';
 import { GithubIcon, LinkedinIcon } from '@/components/ui/Icons';
+import ResumeDownload from '@/components/ui/ResumeDownload';
 import { profile } from '@/data/profile';
 
 export default function Hero() {
@@ -102,6 +103,7 @@ export default function Hero() {
               >
                 Contact Me
               </motion.button>
+              <ResumeDownload variant="secondary" size="md" label="Download CV" />
             </motion.div>
 
             {/* Social links */}
@@ -139,14 +141,7 @@ export default function Hero() {
                 />
               </a>
               <span className="w-px h-4 bg-gray-700" />
-              <a
-                href={profile.resume}
-                download
-                className="flex items-center gap-2 text-sm text-gray-400 hover:text-indigo-400 transition-colors"
-              >
-                <Download size={18} />
-                <span>Resume</span>
-              </a>
+              <ResumeDownload variant="text" label="Resume" />
             </motion.div>
           </div>
 
@@ -190,7 +185,7 @@ export default function Hero() {
                 className="absolute -top-3 -right-6 bg-gray-900 border border-gray-700 rounded-xl px-3 py-2 shadow-lg"
               >
                 <p className="text-xs text-gray-400 font-medium">Location</p>
-                <p className="text-xs font-semibold text-white">West Bengal, IN</p>
+                <p className="text-xs font-semibold text-white">Gaya | Haldia, IN</p>
               </motion.div>
             </div>
           </motion.div>

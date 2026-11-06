@@ -1,11 +1,11 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Briefcase, GraduationCap, CalendarDays, MapPin } from 'lucide-react';
+import { Briefcase, GraduationCap, CalendarDays, MapPin, Award } from 'lucide-react';
 import SectionHeading from '@/components/ui/SectionHeading';
 import { experienceData, educationData } from '@/data/experience';
 
-function TimelineCard({ title, subtitle, period, location, points, skills, type, index }) {
+function TimelineCard({ title, subtitle, period, location, grade, points, skills, type, index }) {
   return (
     <motion.div
       initial={{ opacity: 0, x: type === 'work' ? -20 : 20 }}
@@ -19,7 +19,7 @@ function TimelineCard({ title, subtitle, period, location, points, skills, type,
 
       <div className="bg-gray-900 border border-gray-800 rounded-xl p-5 hover:border-indigo-500/30 transition-colors">
         {/* Header */}
-        <div className="flex flex-wrap items-start justify-between gap-2 mb-3">
+        <div className="flex flex-wrap items-start justify-between gap-2 mb-2">
           <div>
             <h3 className="text-base font-semibold text-white leading-tight">{title}</h3>
             <p className="text-sm text-indigo-400 font-medium mt-0.5">{subtitle}</p>
@@ -30,16 +30,25 @@ function TimelineCard({ title, subtitle, period, location, points, skills, type,
           </span>
         </div>
 
-        {location && (
-          <div className="flex items-center gap-1 text-xs text-gray-500 mb-3">
-            <MapPin size={11} />
-            {location}
-          </div>
-        )}
+        {/* Sub-meta (Location & Grade) */}
+        <div className="flex flex-wrap items-center gap-3 text-xs text-gray-500 mb-3">
+          {location && (
+            <span className="flex items-center gap-1">
+              <MapPin size={11} />
+              {location}
+            </span>
+          )}
+          {grade && (
+            <span className="flex items-center gap-1 text-emerald-400 font-medium bg-emerald-500/10 px-2 py-0.5 rounded">
+              <Award size={11} />
+              {grade}
+            </span>
+          )}
+        </div>
 
         {/* Content */}
         {Array.isArray(points) ? (
-          <ul className="space-y-2 mb-4">
+          <ul className="space-y-2 mb-3">
             {points.map((point, i) => (
               <li key={i} className="flex gap-2 text-sm text-gray-400 leading-relaxed">
                 <span className="mt-2 w-1.5 h-1.5 rounded-full bg-indigo-500/80 shrink-0" />
@@ -48,7 +57,7 @@ function TimelineCard({ title, subtitle, period, location, points, skills, type,
             ))}
           </ul>
         ) : (
-          <p className="text-sm text-gray-400 leading-relaxed mb-4">{points}</p>
+          <p className="text-sm text-gray-400 leading-relaxed mb-3">{points}</p>
         )}
 
         {/* Skill tags */}
@@ -85,7 +94,7 @@ export default function Experience() {
             <div className="flex items-center gap-2 mb-6">
               <Briefcase size={16} className="text-indigo-400" />
               <h3 className="text-sm font-semibold text-gray-300 uppercase tracking-wider">
-                Experience
+                Experience & Leadership
               </h3>
             </div>
             <div className="space-y-5">
@@ -121,6 +130,7 @@ export default function Experience() {
                   subtitle={edu.institution}
                   period={edu.period}
                   location={edu.location}
+                  grade={edu.grade}
                   points={edu.description}
                   type="education"
                   index={i}

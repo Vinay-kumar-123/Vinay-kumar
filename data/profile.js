@@ -1,3 +1,5 @@
+import { resumeConfig } from './resume';
+
 export const profile = {
   name: 'Vinay Kumar',
   tagline: 'Software Engineer & Product Builder',
@@ -11,12 +13,14 @@ Through practical software development at HSR Hi-Tech Solutions, I gained indust
 
 I'm actively exploring generative AI integration, cloud deployment, and product engineering — building toward a career as a full-stack engineer and product builder.`,
   email: 'vinay.k.dev4@gmail.com',
-  location: 'West Bengal, India',
+  altEmail: 'rajupendra15@gmail.com',
+  phone: '+91-8830603531',
+  location: 'Gaya, Bihar | Haldia, West Bengal',
   github: 'https://github.com/Vinay-kumar-123',
-  linkedin:
-    'https://www.linkedin.com/in/vinay-kumar-663975326',
+  linkedin: 'https://www.linkedin.com/in/vinay-kumar-663975326',
   leetcode: 'https://leetcode.com/u/codedbyvinay/',
-  resume: '/resume/resume.pdf',
+  resume: resumeConfig.filePath,
+  resumeFileName: resumeConfig.fileName,
   avatar: '/images/photo.jpg',
   roles: [
     'Full-Stack Developer',

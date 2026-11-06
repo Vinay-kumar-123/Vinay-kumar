@@ -4,18 +4,19 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { GraduationCap, MapPin, Code2, Lightbulb } from 'lucide-react';
 import SectionHeading from '@/components/ui/SectionHeading';
+import ResumeDownload from '@/components/ui/ResumeDownload';
 import { profile } from '@/data/profile';
 
 const highlights = [
   {
     icon: GraduationCap,
     label: 'Education',
-    value: 'B.Tech CSE @ Haldia Institute of Technology',
+    value: 'B.Tech CSE @ Haldia Institute of Technology (2024–2028)',
   },
   {
     icon: MapPin,
     label: 'Location',
-    value: 'West Bengal, India',
+    value: 'Gaya, Bihar | Haldia, West Bengal',
   },
   {
     icon: Code2,
@@ -25,7 +26,7 @@ const highlights = [
   {
     icon: Lightbulb,
     label: 'Currently',
-    value: 'Building AI-powered products & mentoring devs',
+    value: 'Building AI-powered products & mentoring developers',
   },
 ];
 
@@ -102,8 +103,8 @@ export default function About() {
                   'Artificial Intelligence',
                   'Full-Stack Development',
                   'SaaS Products',
-                  'Automation',
-                  'Product Engineering',
+                  'Generative AI & RAG',
+                  'Automation & Cloud',
                   'Open Source',
                 ].map((interest) => (
                   <span
@@ -118,18 +119,16 @@ export default function About() {
 
             {/* CTA */}
             <div className="pt-2 flex flex-wrap gap-3">
-              <a
-                href={profile.resume}
-                download
-                className="inline-flex items-center gap-2 px-5 py-2.5 bg-indigo-600 hover:bg-indigo-500 text-white text-sm font-semibold rounded-lg transition-colors shadow-lg shadow-indigo-500/20"
-              >
-                Download Resume
-              </a>
+              <ResumeDownload
+                variant="primary"
+                label="Download Resume"
+                size="md"
+              />
               <a
                 href={profile.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-5 py-2.5 border border-gray-700 hover:border-indigo-500 text-gray-300 hover:text-white text-sm font-semibold rounded-lg hover:bg-indigo-500/10 transition-all"
+                className="inline-flex items-center gap-2 px-5 py-2.5 border border-gray-700 hover:border-indigo-500 text-gray-300 hover:text-white text-sm font-semibold rounded-lg hover:bg-indigo-500/10 transition-all cursor-pointer"
               >
                 View GitHub
               </a>

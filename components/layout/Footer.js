@@ -1,6 +1,7 @@
 import Link from 'next/link';
-import { Code2, ExternalLink } from 'lucide-react';
+import { Code2 } from 'lucide-react';
 import { GithubIcon, LinkedinIcon, LeetCodeIcon } from '@/components/ui/Icons';
+import ResumeDownload from '@/components/ui/ResumeDownload';
 import { profile } from '@/data/profile';
 
 const CURRENT_YEAR = 2026;
@@ -23,8 +24,10 @@ export default function Footer() {
             © {CURRENT_YEAR} Vinay Kumar. Built with Next.js &amp; Tailwind CSS.
           </p>
 
-          {/* Social links */}
+          {/* Social links & Centralized Resume */}
           <div className="flex items-center gap-3">
+            <ResumeDownload variant="text" label="Resume" showIcon={false} className="text-xs font-medium" />
+            <span className="w-px h-3 bg-gray-800" />
             <a
               href={profile.github}
               target="_blank"

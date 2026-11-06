@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, Code2 } from 'lucide-react';
+import ResumeDownload from '@/components/ui/ResumeDownload';
 
 const navLinks = [
   { label: 'About', href: '#about' },
@@ -76,7 +77,7 @@ export default function Navbar() {
                 <button
                   key={link.href}
                   onClick={() => handleNavClick(link.href)}
-                  className={`px-3 py-1.5 rounded-md text-sm font-medium transition-all duration-200 ${
+                  className={`px-3 py-1.5 rounded-md text-sm font-medium transition-all duration-200 cursor-pointer ${
                     isActive
                       ? 'text-indigo-400 bg-indigo-500/10'
                       : 'text-gray-400 hover:text-white hover:bg-white/5'
@@ -86,20 +87,16 @@ export default function Navbar() {
                 </button>
               );
             })}
-            <a
-              href="/resume/resume.pdf"
-              download
-              className="ml-3 px-4 py-1.5 bg-indigo-600 hover:bg-indigo-500 text-white text-sm font-semibold rounded-lg transition-colors"
-            >
-              Resume
-            </a>
+            <div className="ml-3">
+              <ResumeDownload variant="nav" label="Resume" showIcon={false} />
+            </div>
           </nav>
 
           {/* Mobile menu toggle */}
           <button
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle menu"
-            className="md:hidden p-2 rounded-md text-gray-400 hover:text-white hover:bg-white/5 transition-colors"
+            className="md:hidden p-2 rounded-md text-gray-400 hover:text-white hover:bg-white/5 transition-colors cursor-pointer"
           >
             {isOpen ? <X size={20} /> : <Menu size={20} />}
           </button>
@@ -126,13 +123,14 @@ export default function Navbar() {
                   {link.label}
                 </button>
               ))}
-              <a
-                href="/resume/resume.pdf"
-                download
-                className="mt-2 px-3 py-2.5 bg-indigo-600 hover:bg-indigo-500 text-white text-sm font-semibold rounded-lg transition-colors text-center"
-              >
-                Download Resume
-              </a>
+              <div className="mt-2 pt-2 border-t border-gray-800">
+                <ResumeDownload
+                  variant="primary"
+                  label="Download Resume"
+                  size="md"
+                  className="w-full"
+                />
+              </div>
             </nav>
           </motion.div>
         )}
