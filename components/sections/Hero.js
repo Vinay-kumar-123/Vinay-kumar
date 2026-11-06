@@ -162,6 +162,7 @@ export default function Hero() {
                   fill
                   className="object-cover"
                   priority
+                  loading="eager"
                   sizes="(max-width: 640px) 224px, 288px"
                 />
               </div>
