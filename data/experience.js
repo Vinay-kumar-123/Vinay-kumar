@@ -1,18 +1,7 @@
 export const experienceData = [
+  
   {
     id: 1,
-    role: 'Full Stack & Machine Learning Mentor',
-    company: 'HSR Hi-Tech Solutions',
-    type: 'Position of Responsibility',
-    period: 'Present',
-    description: [
-      'Mentoring students in Full Stack Web Development and Machine Learning (React.js, Node.js, MongoDB, Python).',
-      'Reviewing assignments, providing technical feedback, and conducting onboarding sessions for trainees.',
-    ],
-    skills: ['React.js', 'Node.js', 'MongoDB', 'Python', 'Mentorship', 'Code Reviews'],
-  },
-  {
-    id: 2,
     role: 'Full Stack Developer Intern',
     company: 'HSR Hi-Tech Solutions',
     type: 'Internship',

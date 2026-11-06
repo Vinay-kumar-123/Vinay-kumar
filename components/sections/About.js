@@ -55,7 +55,7 @@ export default function About() {
                 src={profile.avatar}
                 alt="Vinay Kumar"
                 fill
-                className="object-cover"
+                className="object-cover object-top"
                 sizes="192px"
               />
             </div>

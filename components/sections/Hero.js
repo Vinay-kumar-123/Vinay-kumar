@@ -160,7 +160,7 @@ export default function Hero() {
                   src={profile.avatar}
                   alt="Vinay Kumar"
                   fill
-                  className="object-cover"
+                  className="object-cover object-top"
                   priority
                   loading="eager"
                   sizes="(max-width: 640px) 224px, 288px"
